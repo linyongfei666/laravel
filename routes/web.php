@@ -22,3 +22,5 @@ Route::get('/login','LoginController@login');//登录页面
 Route::get('/cart','CartController@cart');//购物车
 
 Route::get('/detail','DetailController@detail');//商品详情
+
+Route::get('/order','OrderController@order');//商品详情
