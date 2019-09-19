@@ -107,7 +107,7 @@
 						</a>
 					</div>
 					<div class="col s4">
-						<a href="shop-single.html" class="button-link">
+						<a href="detail.blade.php" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-eye"></i>
@@ -139,7 +139,7 @@
 						</a>
 					</div>
 					<div class="col s4">
-						<a href="checkout.html" class="button-link">
+						<a href="pay.blade.php" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-credit-card"></i>
