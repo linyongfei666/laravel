@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index/index');//商品首页
 });
+Route::get('/','IndexController@index');//注册
+Route::get('/register','LoginController@register');//注册
+
+Route::get('/login','LoginController@login');//登录页面
+
+Route::get('/cart','CartController@cart');//购物车
+
+Route::get('/detail','DetailController@detail');//商品详情
