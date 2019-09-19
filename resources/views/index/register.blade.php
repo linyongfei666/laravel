@@ -28,7 +28,7 @@
 	<div class="navbar-top">
 		<!-- site brand	 -->
 		<div class="site-brand">
-			<a href="index.html"><h1>Mstore</h1></a>
+			<a href="index.html"><h1>注册</h1></a>
 		</div>
 		<!-- end site brand	 -->
 		<div class="side-nav-panel-right">
@@ -367,39 +367,37 @@
 	<div class="pages section">
 		<div class="container">
 			<div class="pages-head">
-				<h3>REGISTER</h3>
+				<h3>用户注册</h3>
 			</div>
 			<div class="register">
 				<div class="row">
 					<form class="col s12">
 						<div class="input-field">
-							<input type="text" class="validate" placeholder="NAME" required>
+							<input type="text" class="validate" placeholder="用户名" required  id="u_name" name="u_name">
 						</div>
 						<div class="input-field">
-							<input type="email" placeholder="EMAIL" class="validate" required>
+							<input type="email" placeholder="邮箱" class="validate" required  id="u_email" name="u_email">
 						</div>
 						<div class="input-field">
-							<input type="password" placeholder="PASSWORD" class="validate" required>
+							<input type="password" placeholder="密码" class="validate" required id="u_pwd" name="u_pwd">
 						</div>
-						<div class="btn button-default">REGISTER</div>
+						<div class="btn button-default" id="btn">注册</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end register -->
-	
-
 	<!-- loader -->
 	<div id="fakeLoader"></div>
 	<!-- end loader -->
-	
 	<!-- footer -->
 	<div class="footer">
 		<div class="container">
 			<div class="about-us-foot">
-				<h6>Mstore</h6>
-				<p>is a lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p>
+				<h6>欢迎你的信任</h6>
+				<p>生活就像一杯咖啡.</p>
+				<p>需要你仔细品尝.</p>
 			</div>
 			<div class="social-media">
 				<a href=""><i class="fa fa-facebook"></i></a>
@@ -409,12 +407,11 @@
 				<a href=""><i class="fa fa-instagram"></i></a>
 			</div>
 			<div class="copyright">
-				<span>© 2017 All Right Reserved</span>
+				<span>©2019.9.19</span>
 			</div>
 		</div>
 	</div>
 	<!-- end footer -->
-	
 	<!-- scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/materialize.min.js"></script>
@@ -424,3 +421,46 @@
 	<script src="js/main.js"></script>
 </body>
 </html>
+
+<script>
+	$(function(){
+		$('#btn').click(function(){
+			var u_name=$('#u_name').val();
+			var u_pwd=$('#u_pwd').val();
+			var u_email=$('#u_email').val();
+			// console.log(u_name);
+			// console.log(u_pwd);
+			// console.log(u_email);
+
+			if(u_name==''){
+				alert('用户名不能为空');
+				return false;
+			}
+
+			if(u_pwd==''){
+				alert('密码不能为空');
+				return false;
+			}
+
+			if(u_email==''){
+				alert('邮箱不能为空');
+				return false;
+			}
+
+			$.post({
+				url:"/regdo",
+				data:{u_name:u_name,u_pwd:u_pwd,u_email:u_email},
+				dataType:'json',
+				success:function(res){
+					// console.log(res);
+					if(res.code==1){
+						alert(res.msg);
+						location.href="/login";
+					}
+
+				}
+			})
+
+		})
+	})
+</script>
