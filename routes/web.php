@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/register','LoginController@register');//注册
+
+Route::get('/login','LoginController@login');//登录页面
+
+Route::get('/cart','CartController@cart');//购物车
