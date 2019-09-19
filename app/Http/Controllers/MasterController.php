@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BbbController extends Controller
+class MasterController extends Controller
 {
-
-
+    //
 }
