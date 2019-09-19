@@ -422,6 +422,5 @@
 	<script src="js/fakeLoader.min.js"></script>
 	<script src="js/animatedModal.min.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 </html>
