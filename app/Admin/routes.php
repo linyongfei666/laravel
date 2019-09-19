@@ -12,4 +12,5 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
     $router->resource('brand', BrandController::class);   //商品品牌
+    $router->resource('category', CategoryController::class);    //商品分类
 });
