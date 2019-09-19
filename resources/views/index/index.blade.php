@@ -462,44 +462,14 @@
 			<div class="row">
 				<div class="col s6">
 					<div class="content">
-						<img src="img/product-new1.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new2.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
-			<div class="row margin-bottom">
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new3.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
+						@foreach($data as $k=>$v)
 						<img src="img/product-new4.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
+						<h6><a href="/detail">{{$v->g_name}}</a></h6>
 						<div class="price">
-							$20 <span>$28</span>
+							 ${{$v->g_price0}}<span>${{$v->price}}</span>
 						</div>
-						<button class="btn button-default">ADD TO CART</button>
+						<button class="btn button-default">添加到购物车</button>
+						@endforeach
 					</div>
 				</div>
 			</div>
