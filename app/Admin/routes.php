@@ -11,5 +11,9 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
+<<<<<<< HEAD
     $router->resource('brand', BrandController::class);   //商品品牌
+=======
+
+>>>>>>> hs-dev
 });
