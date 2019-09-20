@@ -12,6 +12,7 @@ class IndexController extends Controller
         $data = DB::table('goods')->get();
         return view('index/index', ['data' => $data]);
     }
+<<<<<<< HEAD
 }
 =======
 
@@ -23,3 +24,7 @@ class IndexController extends Controller
 
 }
 >>>>>>> hs-dev
+=======
+
+}
+>>>>>>> 4d0c7698d2128fcccc3b4532de2b81f300c015d7
