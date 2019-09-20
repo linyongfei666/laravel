@@ -391,7 +391,7 @@
 					<div class="col s5">
 						<h5>数量</h5>
 					</div>
-					<div class="col s5" g_number={{$v->g_number}}>
+					<div class="col s5" g_number={{$v->g_number}} g_id={{$v->g_id}}>
 						<input value={{$v->buy_num}} type="" class="buy_num"  style="width: 50px;">
 					</div>
 				</div>
@@ -422,7 +422,7 @@
 				<div class="col s7">
 					<h5>{{$v->g_name}}</h5>
 				</div>
-				<div class="col s5">
+				<div class="col s5" class="aaa">
 					<h5>{{$v->price*$v->buy_num}}</h5>
 				</div>
 			</div>
@@ -431,8 +431,8 @@
 				<div class="col s7">
 					<h6>总价</h6>
 				</div>
-				<div class="col s5">
-					<h6>$41.00</h6>
+				<div class="col s5 stotal">
+					<h6>$0.00</h6>
 				</div>
 			</div>
 		</div>
@@ -477,6 +477,9 @@
 </body>
 </html>
 <script>
+	$(document).ready(function(){
+		total();
+	})
 	//购买数量
 	$(document).on('blur','.buy_num',function(){
 		var _this=$(this);
@@ -491,5 +494,47 @@
 		}else{
 			_this.val(parseFloat(buy_num));
 		}
+		//控制器更改购买数量
+		var g_id = _this.parents('div').attr('g_id');
+		//更改购买数量
+		changebuynum(g_id,buy_num);
+		//商品总价
+		total();
+		//获取小计
+		gettotal(g_id,_this);
+		replaceDoc();
 	})
+	function changebuynum(g_id,buy_num){
+		$.ajax({
+			url:'/cart/cartbuynum',
+			data:{g_id:g_id,buy_num:buy_num},
+			type:'POST',
+			dataType:'json',
+			success:function(res){
+				alert(res);
+			}
+		})
+	}
+	//总价
+	function total(){
+		$.post(
+				'/cart/total',
+				function(res){
+					$(".stotal").html('<h6>$'+res+'</h6>')
+				}
+		)
+	}
+	function gettotal(g_id,_this){
+		$.post(
+				'/cart/gettotal',
+				{g_id:g_id},
+				function(res) {
+					$('.aaa').children().html('<h5>$'+res+'</h5>');
+				}
+		)
+	}
+	function replaceDoc()
+	{
+		window.location.replace("/cart")
+	}
 </script>
