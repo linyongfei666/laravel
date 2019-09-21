@@ -462,7 +462,7 @@
 			<div class="">
 				<div class="col s6">
 					<div class="content">
-						@foreach($data as $/k=>$v)
+						@foreach($data as $k=>$v)
 						<img src="img/product-new4.png" alt="">
 						<h6><a href="/detail">{{$v->g_name}}</a></h6>
 						<div class="price">
