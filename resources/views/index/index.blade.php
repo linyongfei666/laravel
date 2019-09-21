@@ -459,10 +459,10 @@
 				<div class="divider-top"></div>
 				<div class="divider-bottom"></div>
 			</div>
-			<div class="row">
+			<div class="">
 				<div class="col s6">
 					<div class="content">
-						@foreach($data as $k=>$v)
+						@foreach($data as $/k=>$v)
 						<img src="img/product-new4.png" alt="">
 						<h6><a href="/detail">{{$v->g_name}}</a></h6>
 						<div class="price">
@@ -490,68 +490,6 @@
 	<!-- end promo -->
 
 	<!-- product -->
-	<div class="section product">
-		<div class="container">
-			<div class="section-head">
-				<h4>TOP PRODUCT</h4>
-				<div class="divider-top"></div>
-				<div class="divider-bottom"></div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new1.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new2.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new3.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new4.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
-			<div class="pagination-product">
-				<ul>
-					<li class="active">1</li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
-					<li><a href="">5</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<!-- end product -->
 	
 	<!-- loader -->
