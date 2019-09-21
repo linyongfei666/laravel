@@ -8,7 +8,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-    	$data=DB::table('goods')->get();
-        return view('index/index',['data'=>$data]);
+        $data = DB::table('goods')->get();
+        return view('index/index', ['data' => $data]);
     }
 }

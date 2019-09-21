@@ -4,9 +4,9 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GoodsModel extends Model
+class BrandModel extends Model
 {
-    protected $table = 'goods';
-    protected $primaryKey = 'g_id';
+    protected $table = 'brand';
+    protected $primaryKey = 'pid';
     public $timestamps = false;
 }

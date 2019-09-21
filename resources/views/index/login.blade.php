@@ -2,7 +2,7 @@
 <html lang="zxx">
 <head>
 	<meta charset="UTF-8">
-	<title>Mstore - Online Shop Mobile Template</title>
+	<title>登录</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
 	<div class="navbar-top">
 		<!-- site brand	 -->
 		<div class="site-brand">
-			<a href="index.html"><h1>Mstore</h1></a>
+			<a href="index.html"><h1>你好</h1></a>
 		</div>
 		<!-- end site brand	 -->
 		<div class="side-nav-panel-right">
@@ -367,19 +367,19 @@
 	<div class="pages section">
 		<div class="container">
 			<div class="pages-head">
-				<h3>LOGIN</h3>
+				<h3>登录</h3>
 			</div>
 			<div class="login">
 				<div class="row">
 					<form class="col s12">
 						<div class="input-field">
-							<input type="text" class="validate" placeholder="USERNAME" required>
+							<input type="text" class="validate" placeholder="请输入姓名" required name="u_name" id="u_name">
 						</div>
 						<div class="input-field">
-							<input type="password" class="validate" placeholder="PASSWORD" required>
+							<input type="password" class="validate" placeholder="请输入密码" required name="u_pwd" id="u_pwd">
 						</div>
-						<a href=""><h6>Forgot Password ?</h6></a>
-						<a href="" class="btn button-default">LOGIN</a>
+						{{--<a href=""><h6>Forgot Password ?</h6></a>--}}
+						<a class="btn button-default" id="btn">登录</a>
 					</form>
 				</div>
 			</div>
@@ -395,8 +395,9 @@
 	<div class="footer">
 		<div class="container">
 			<div class="about-us-foot">
-				<h6>Mstore</h6>
-				<p>is a lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p>
+				<h6>欢迎来到登录页面</h6>
+				<p>选择相信的.</p>
+				<p>相信选择的.</p>
 			</div>
 			<div class="social-media">
 				<a href=""><i class="fa fa-facebook"></i></a>
@@ -406,7 +407,7 @@
 				<a href=""><i class="fa fa-instagram"></i></a>
 			</div>
 			<div class="copyright">
-				<span>© 2017 All Right Reserved</span>
+				<span>© 2019.9.20</span>
 			</div>
 		</div>
 	</div>
@@ -422,3 +423,23 @@
 
 </body>
 </html>
+<script>
+	$('#btn').click(function(){
+		var u_name=$('#u_name').val();
+		var u_pwd=$('#u_pwd').val();
+		// console.log(u_name);
+		// console.log(u_pwd);
+		$.post({
+			url:"/logindo",
+			data:{u_name:u_name,u_pwd:u_pwd},
+			dataType:'json',
+			success:function(res){
+				// console.log(res);
+				if(res.code==1){
+					alert(res.msg);
+					location.href="/";
+				}
+			}
+		})
+	})
+</script>
