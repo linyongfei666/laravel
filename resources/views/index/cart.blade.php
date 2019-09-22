@@ -502,7 +502,7 @@
 		total();
 		//获取小计
 		gettotal(g_id,_this);
-		replaceDoc();
+//		replaceDoc();
 	})
 	function changebuynum(g_id,buy_num){
 		$.ajax({
@@ -533,8 +533,8 @@
 				}
 		)
 	}
-	function replaceDoc()
-	{
-		window.location.replace("/cart")
-	}
+//	function replaceDoc()
+//	{
+//		window.location.replace("/cart");
+//	}
 </script>

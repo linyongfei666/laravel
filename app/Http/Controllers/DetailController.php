@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use DB;
 class DetailController extends Controller
 {
-    public function detail()
+    public function detail($id)
     {
-    	$data=DB::table('goods')->get();
+    	$where=[
+            'g_id'=>$id
+        ];
+    	$data=DB::table('goods')->where($where)->get();
         return view('index/detail',['data'=>$data]);
     }
 }

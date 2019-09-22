@@ -23,7 +23,6 @@ class LoginController extends Controller
         }
         $data['u_pwd']=md5($data['u_pwd']);
         $res1 = DB::table('user')->first();
-        //dd($res1);
         if ($data['u_name'] == $res1->u_name) {
             die('该用户已经注册');
         }

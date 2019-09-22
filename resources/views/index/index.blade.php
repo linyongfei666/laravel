@@ -464,11 +464,11 @@
 					<div class="content">
 						@foreach($data as $k=>$v)
 						<img src="img/product-new4.png" alt="">
-						<h6><a href="/detail">{{$v->g_name}}</a></h6>
+						<h6><a href='/detail/{{$v->g_id}}'>{{$v->g_name}}</a></h6>
 						<div class="price">
 							 ${{$v->g_price0}}<span>${{$v->price}}</span>
 						</div>
-						<button class="btn button-default">添加到购物车</button>
+						<button class="btn button-default" g_id="{{$v->g_id}}">添加到购物车</button>
 						@endforeach
 					</div>
 				</div>
@@ -527,3 +527,22 @@
 
 </body>
 </html>
+<script>
+	$(document).on('click','.btn',function() {
+		var _this = $(this);
+		var g_id = _this.attr('g_id');
+		$.ajax({
+			url: '/cart/cartadd',
+			type: 'post',
+			data: {g_id: g_id},
+			dataType: 'json',
+			success: function (res) {
+				if (res.code == 1) {
+					location.href = '/cart';
+				} else {
+					alert('加入购物车失败');
+				}
+			}
+		})
+	})
+</script>
