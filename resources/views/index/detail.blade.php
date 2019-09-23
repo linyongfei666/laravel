@@ -369,7 +369,7 @@
 				@foreach($data as $k=>$v)
 				<img src="img/shop-single.png" alt="">
 				<h5>{{$v->g_name}}</h5>
-				<div class="price">${{$v->g_price0}} <span>${$v->price}</span></div>
+				<div class="price">${{$v->g_price0}} <span>${{$v->price}}</span></div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eaque in non delectus, error iste veniam commodi mollitia, officia possimus, repellendus maiores doloribus provident. Itaque, ab perferendis nemo tempore! Accusamus</p>
 				<button type="button" class="btn button-default">ADD TO CART</button>
 				@endforeach
