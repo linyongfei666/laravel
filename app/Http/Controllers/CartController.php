@@ -14,13 +14,13 @@ class CartController extends Controller
 				'g_id' => $g_id,
 		];
 		$goodsInfo = DB::table('goods')->where($goodsWhere)->first();
-//		$user = request()->session()->get('user');
-//		$goodsInfo = DB::table('user')->where('user_tel',$user['user_id'])->first();
-		//dd($goodsInfo);
-//		$user_id = $goodsInfo->user_id;
+		$user = request()->session()->get('user');
+		dd($user);
+		$goodsInfo = DB::table('user')->where('u_id',$user['u_id'])->first();
+		$user_id = $goodsInfo->u_id;
 		$info = [
 				'goods_id' => $g_id,
-//				'user_id'=>$user_id
+				'u_id'=>$u_id
 		];
 		$res = DB::table('cart')->insert($info);
 		if ($res) {
@@ -34,8 +34,17 @@ class CartController extends Controller
 	//购物车首页
 	public function cart()
 	{
+		$user = request()->session()->get('user');
+		dd($user);
+		$goodsInfo = DB::table('user')->where('u_id',$user['u_id'])->first();
+        dd($goodsInfo);
+       if($goodsInfo==''){
+            return redirect('/login');
+        }
+        $u_id = $goodsInfo->u_id;
 		$cartinfo = DB::table('cart')
 				->join('goods','cart.goods_id','=','goods.g_id')
+				->where('u_id',$u_id)
 				->get();
 		return view('index/cart',['cartinfo'=>$cartinfo]);
 	}

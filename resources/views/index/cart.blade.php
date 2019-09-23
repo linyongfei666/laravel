@@ -511,7 +511,7 @@
 			type:'POST',
 			dataType:'json',
 			success:function(res){
-				alert(res);
+				console.log(res);
 			}
 		})
 	}
