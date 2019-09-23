@@ -33,7 +33,11 @@ class GoodsController extends AdminController
         $grid->column('price', __('Price'));
         $grid->column('cid', __('Cid'));
         $grid->column('g_number', __('G number'));
+<<<<<<< HEAD
         $grid->column('img', __('Img'))->image('/storage');
+=======
+        $grid->column('img', __('Img'))->image();
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -77,7 +81,11 @@ class GoodsController extends AdminController
         $form->decimal('price', __('Price'));
         $form->select('cid', __('父级分类'))->options(CategoryModel::selectOptions());
         $form->text('g_number', __('G number'));
+<<<<<<< HEAD
         $form->file('img', __('Img'));
+=======
+        $form->image('img', __('Img'));
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 
         return $form;
     }

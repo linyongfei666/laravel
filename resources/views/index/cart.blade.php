@@ -2,7 +2,11 @@
 <html lang="zxx">
 <head>
 	<meta charset="UTF-8">
+<<<<<<< HEAD
 	<title>商品详情</title>
+=======
+	<title>Mstore - Online Shop Mobile Template</title>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,7 +32,11 @@
 <div class="navbar-top">
 	<!-- site brand	 -->
 	<div class="site-brand">
+<<<<<<< HEAD
 		<a href="index.html"><h1>详情</h1></a>
+=======
+		<a href="index.html"><h1>Mstore</h1></a>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 	</div>
 	<!-- end site brand	 -->
 	<div class="side-nav-panel-right">
@@ -44,11 +52,19 @@
 			<img src="img/profile.jpg" alt="">
 			<h2>John Doe</h2>
 		</li>
+<<<<<<< HEAD
 		<li><a href="setting.html"><i class="fa fa-cog"></i>设置</a></li>
 		<li><a href="about-us.html"><i class="fa fa-user"></i>关于我们</a></li>
 		<li><a href="contact.html"><i class="fa fa-envelope-o"></i>联系我们</a></li>
 		<li><a href="/login"><i class="fa fa-sign-in"></i>登录</a></li>
 		<li><a href="register.html"><i class="fa fa-user-plus"></i>寄存器</a></li>
+=======
+		<li><a href="setting.html"><i class="fa fa-cog"></i>Settings</a></li>
+		<li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
+		<li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
+		<li><a href="login.html"><i class="fa fa-sign-in"></i>Login</a></li>
+		<li><a href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 	</ul>
 </div>
 <!-- end side nav right-->
@@ -369,15 +385,24 @@
 			<h3>购物车</h3>
 		</div>
 		<div class="content">
+<<<<<<< HEAD
 			<div class="divider"></div>
 			@foreach($cartinfo as $k=>$v)
 			<div class="cart-2">
+=======
+			@foreach($cartinfo as $k=>$v)
+			<div class="cart-1">
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 				<div class="row">
 					<div class="col s5">
 						<h5>图片</h5>
 					</div>
 					<div class="col s7">
+<<<<<<< HEAD
 						<img src="/storage/{{$v->img}}" alt="">
+=======
+						<img src="{{$v->img}}" alt="">
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 					</div>
 				</div>
 				<div class="row">
@@ -392,8 +417,13 @@
 					<div class="col s5">
 						<h5>数量</h5>
 					</div>
+<<<<<<< HEAD
 					<div class="col s7">
 						<input value="1" type="text">
+=======
+					<div class="col s5" g_number={{$v->g_number}} g_id={{$v->g_id}}>
+						<input value={{$v->buy_num}} type="" class="buy_num"  style="width: 50px;">
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 					</div>
 				</div>
 				<div class="row">
@@ -413,6 +443,7 @@
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
 				@endforeach
 		</div>
 		<div class="total">
@@ -442,6 +473,33 @@
 			</div>
 		</div>
 		<button class="btn button-default">去结账</button>
+=======
+			<div class="divider"></div>
+				@endforeach
+
+		</div>
+		<div class="total">
+			@foreach($cartinfo as $k=>$v)
+			<div class="row">
+				<div class="col s7">
+					<h5>{{$v->g_name}}</h5>
+				</div>
+				<div class="col s5" class="aaa">
+					<h5>{{$v->price*$v->buy_num}}</h5>
+				</div>
+			</div>
+			@endforeach
+			<div class="row">
+				<div class="col s7">
+					<h6>总价</h6>
+				</div>
+				<div class="col s5 stotal">
+					<h6>$0.00</h6>
+				</div>
+			</div>
+		</div>
+		<button class="btn button-default">结账</button>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 	</div>
 </div>
 <!-- end cart -->
@@ -480,4 +538,70 @@
 <script src="js/main.js"></script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+<script>
+	$(document).ready(function(){
+		total();
+	})
+	//购买数量
+	$(document).on('blur','.buy_num',function(){
+		var _this=$(this);
+		var buy_num = _this.val();
+		var g_number = _this.parents('div').attr('g_number');
+		//验证
+		var reg = /^\d{1,}$/;
+		if(buy_num==''||buy_num<=1||!reg.test(buy_num)){
+			_this.val(1);
+		}else if(parseInt(buy_num)>=parseInt(g_number)){
+			_this.val(g_number);
+		}else{
+			_this.val(parseFloat(buy_num));
+		}
+		//控制器更改购买数量
+		var g_id = _this.parents('div').attr('g_id');
+		//更改购买数量
+		changebuynum(g_id,buy_num);
+		//商品总价
+		total();
+		//获取小计
+		gettotal(g_id,_this);
+//		replaceDoc();
+	})
+	function changebuynum(g_id,buy_num){
+		$.ajax({
+			url:'/cart/cartbuynum',
+			data:{g_id:g_id,buy_num:buy_num},
+			type:'POST',
+			dataType:'json',
+			success:function(res){
+				alert(res);
+			}
+		})
+	}
+	//总价
+	function total(){
+		$.post(
+				'/cart/total',
+				function(res){
+					$(".stotal").html('<h6>$'+res+'</h6>')
+				}
+		)
+	}
+	function gettotal(g_id,_this){
+		$.post(
+				'/cart/gettotal',
+				{g_id:g_id},
+				function(res) {
+					$('.aaa').children().html('<h5>$'+res+'</h5>');
+				}
+		)
+	}
+//	function replaceDoc()
+//	{
+//		window.location.replace("/cart");
+//	}
+</script>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944

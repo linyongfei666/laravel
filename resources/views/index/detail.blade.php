@@ -371,7 +371,11 @@
 				<h5>{{$v->g_name}}</h5>
 				<div class="price">${{$v->g_price0}} <span>${{$v->price}}</span></div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eaque in non delectus, error iste veniam commodi mollitia, officia possimus, repellendus maiores doloribus provident. Itaque, ab perferendis nemo tempore! Accusamus</p>
+<<<<<<< HEAD
 				<button type="button" class="btn button-default">ADD TO CART</button>
+=======
+				<button class="btn button-default" g_id="{{$v->g_id}}">添加到购物车</button>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 				@endforeach
 			</div>
 			<div class="review">
@@ -453,4 +457,27 @@
 	<script src="/js/main.js"></script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+<script>
+	$(document).on('click','.btn',function() {
+		var _this = $(this);
+		var g_id = _this.attr('g_id');
+		$.ajax({
+			url: '/detail/detailadd',
+			type: 'post',
+			data: {g_id: g_id},
+			dataType: 'json',
+			success: function (res) {
+				if (res.code == 1) {
+					location.href = '/cart';
+				} else {
+					alert('加入购物车失败');
+				}
+			}
+		})
+	})
+</script>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944

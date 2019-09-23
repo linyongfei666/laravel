@@ -30,5 +30,6 @@ Route::post('/cart/total','CartController@total');//计算总价
 Route::post('/cart/gettotal','CartController@gettotal');//计算小计
 
 Route::get('/detail/{id}','DetailController@detail');//商品详情
+Route::post('/detail/detailadd','DetailController@detailadd');//商品详情
 
 Route::get('/order','OrderController@order');//订单

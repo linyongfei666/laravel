@@ -381,7 +381,11 @@
             @foreach($data as $v)
             <div class="col s6">
                 <div class="content">
+<<<<<<< HEAD
                     <img src="/storage/{{$v->img}}" alt="">
+=======
+                    <img src="img/product-new1.png" alt="">
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
                     <h6><a href="">{{$v->g_name}}</a></h6>
                     <div class="price">
                         {{$v->g_price0}} <span>{{$v->price}}</span>

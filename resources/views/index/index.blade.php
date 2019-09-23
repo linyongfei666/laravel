@@ -455,6 +455,7 @@
 	<div class="section product">
 		<div class="container">
 			<div class="section-head">
+<<<<<<< HEAD
 				<h4>新产品</h4>
 				<div class="divider-top"></div>
 				<div class="divider-bottom"></div>
@@ -464,14 +465,33 @@
 					<div class="content">
 						@foreach($data as $k=>$v)
 						<img src='/storage/{{$v->img}}' alt="">
+=======
+				<h4>商品大全</h4>
+				<div class="divider-top"></div>
+				<div class="divider-bottom"></div>
+			</div>
+			<div class="row">
+			@foreach($data as $k=>$v)
+				<div class="col s6">
+					<div class="content">
+						
+					<a href='/detail/{{$v->g_id}}'><img src="img/product-new4.png" alt=""></a>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 						<h6><a href='/detail/{{$v->g_id}}'>{{$v->g_name}}</a></h6>
 						<div class="price">
 							 ${{$v->g_price0}}<span>${{$v->price}}</span>
 						</div>
 						<button class="btn button-default" g_id="{{$v->g_id}}">添加到购物车</button>
+<<<<<<< HEAD
 						@endforeach
 					</div>
 				</div>
+=======
+						
+					</div>
+				</div>
+				@endforeach
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 			</div>
 		</div>
 	</div>
@@ -483,7 +503,11 @@
 			<div class="content">
 				<h4>产品套装</h4>
 				<p>存有商品增强回扣</p>
+<<<<<<< HEAD
 				<button class="btn button-default"><a  href="/product">现在去购物</a></button>
+=======
+				<button class="btn button-default">现在去购物</button>
+>>>>>>> 32d255ec8b5e8a987016ad26031baa277b4f1944
 			</div>
 		</div>
 	</div>
