@@ -8,11 +8,43 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
+	public function cartadd(){
+		$g_id = request()->g_id;
+		$goodsWhere = [
+				'g_id' => $g_id,
+		];
+		$goodsInfo = DB::table('goods')->where($goodsWhere)->first();
+		$user = request()->session()->get('user');
+		dd($user);
+		$goodsInfo = DB::table('user')->where('u_id',$user['u_id'])->first();
+		$user_id = $goodsInfo->u_id;
+		$info = [
+				'goods_id' => $g_id,
+				'u_id'=>$u_id
+		];
+		$res = DB::table('cart')->insert($info);
+		if ($res) {
+			return ['code' => 1, 'res' => '加入购物车成功'];
+		} else {
+			return ['code' => 0, 'res' => '加入购物车失败'];
+		}
+
+
+	}
 	//购物车首页
 	public function cart()
 	{
+		$user = request()->session()->get('user');
+		dd($user);
+		$goodsInfo = DB::table('user')->where('u_id',$user['u_id'])->first();
+        dd($goodsInfo);
+       if($goodsInfo==''){
+            return redirect('/login');
+        }
+        $u_id = $goodsInfo->u_id;
 		$cartinfo = DB::table('cart')
 				->join('goods','cart.goods_id','=','goods.g_id')
+				->where('u_id',$u_id)
 				->get();
 		return view('index/cart',['cartinfo'=>$cartinfo]);
 	}

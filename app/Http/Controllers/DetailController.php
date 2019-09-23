@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class DetailController extends Controller
 {
-    public function detail()
+    public function detail($id)
     {
-        return view('index/detail');
+    	$where=[
+            'g_id'=>$id
+        ];
+    	$data=DB::table('goods')->where($where)->get();
+        return view('index/detail',['data'=>$data]);
     }
 }

@@ -376,7 +376,7 @@
 						<h5>图片</h5>
 					</div>
 					<div class="col s7">
-						<img src="C:\Users\蔺永飞\Pictures\Saved Pictures/52ccf2e33dbbcaa2.jpg" alt="">
+						<img src="{{$v->img}}" alt="">
 					</div>
 				</div>
 				<div class="row">
@@ -502,7 +502,7 @@
 		total();
 		//获取小计
 		gettotal(g_id,_this);
-		replaceDoc();
+//		replaceDoc();
 	})
 	function changebuynum(g_id,buy_num){
 		$.ajax({
@@ -511,7 +511,7 @@
 			type:'POST',
 			dataType:'json',
 			success:function(res){
-				alert(res);
+				console.log(res);
 			}
 		})
 	}
@@ -533,8 +533,8 @@
 				}
 		)
 	}
-	function replaceDoc()
-	{
-		window.location.replace("/cart")
-	}
+//	function replaceDoc()
+//	{
+//		window.location.replace("/cart");
+//	}
 </script>

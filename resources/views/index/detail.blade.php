@@ -9,15 +9,15 @@
 	<meta name="apple-touch-fullscreen" content="yes">
 	<meta name="HandheldFriendly" content="True">
 
-	<link rel="stylesheet" href="css/materialize.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.css">
-	<link rel="stylesheet" href="css/owl.transitions.css">
-	<link rel="stylesheet" href="css/fakeLoader.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/materialize.css">
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/owl.carousel.css">
+	<link rel="stylesheet" href="/css/owl.theme.css">
+	<link rel="stylesheet" href="/css/owl.transitions.css">
+	<link rel="stylesheet" href="/css/fakeLoader.css">
+	<link rel="stylesheet" href="/css/animate.css">
+	<link rel="stylesheet" href="/css/style.css">
 	
 	<link rel="shortcut icon" href="img/favicon.png">
 
@@ -366,11 +366,13 @@
 	<div class="pages section">
 		<div class="container">
 			<div class="shop-single">
+				@foreach($data as $k=>$v)
 				<img src="img/shop-single.png" alt="">
-				<h5>Fashion Men's</h5>
-				<div class="price">$20 <span>$28</span></div>
+				<h5>{{$v->g_name}}</h5>
+				<div class="price">${{$v->g_price0}} <span>${{$v->price}}</span></div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eaque in non delectus, error iste veniam commodi mollitia, officia possimus, repellendus maiores doloribus provident. Itaque, ab perferendis nemo tempore! Accusamus</p>
 				<button type="button" class="btn button-default">ADD TO CART</button>
+				@endforeach
 			</div>
 			<div class="review">
 					<h5>1 reviews</h5>
@@ -443,12 +445,12 @@
 	<!-- end footer -->
 	
 	<!-- scripts -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/materialize.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/fakeLoader.min.js"></script>
-	<script src="js/animatedModal.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/fakeLoader.min.js"></script>
+	<script src="/js/animatedModal.min.js"></script>
+	<script src="/js/main.js"></script>
 
 </body>
 </html>

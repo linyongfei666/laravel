@@ -2,7 +2,7 @@
 <html lang="zxx">
 <head>
 	<meta charset="UTF-8">
-	<title>Mstore - Online Shop Mobile Template</title>
+	<title>首页</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
 	<div class="navbar-top">
 		<!-- site brand	 -->
 		<div class="site-brand">
-			<a href="index.html"><h1>Mstore</h1></a>
+			<a href="index.html"><h1>首页</h1></a>
 		</div>
 		<!-- end site brand	 -->
 		<div class="side-nav-panel-right">
@@ -44,11 +44,11 @@
 				<img src="img/profile.jpg" alt="">
 				<h2>John Doe</h2>
 			</li>
-			<li><a href="setting.html"><i class="fa fa-cog"></i>Settings</a></li>
-			<li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
-			<li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
-			<li><a href="login.blade.php"><i class="fa fa-sign-in"></i>Login</a></li>
-			<li><a href="register.blade.php"><i class="fa fa-user-plus"></i>Register</a></li>
+			<li><a href="setting.html"><i class="fa fa-cog"></i>设置</a></li>
+			<li><a href="about-us.html"><i class="fa fa-user"></i>关于我们</a></li>
+			<li><a href="contact.html"><i class="fa fa-envelope-o"></i>联系我们</a></li>
+			<li><a href="/login"><i class="fa fa-sign-in"></i>登录</a></li>
+			<li><a href="register.blade.php"><i class="fa fa-user-plus"></i>寄存器</a></li>
 		</ul>
 	</div>
 	<!-- end side nav right-->
@@ -57,7 +57,7 @@
 	<div class="navbar-bottom">
 		<div class="row">
 			<div class="col s2">
-				<a href="index.html"><i class="fa fa-home"></i></a>
+				<a href="/"><i class="fa fa-home"></i></a>
 			</div>
 			<div class="col s2">
 				<a href="wishlist.html"><i class="fa fa-heart"></i></a>
@@ -369,25 +369,25 @@
 			<li>
 				<img src="img/slide1.jpg" alt="">
 				<div class="caption slider-content  center-align">
-					<h2>WELCOME TO MSTORE</h2>
-					<h4>Lorem ipsum dolor sit amet.</h4>
-					<a href="" class="btn button-default">SHOP NOW</a>
+					<h2>欢迎来到MSTORE</h2>
+					<h4>现有商品优惠.</h4>
+					<a href="" class="btn button-default">现在去购物</a>
 				</div>
 			</li>
 			<li>
 				<img src="img/slide2.jpg" alt="">
 				<div class="caption slider-content center-align">
-					<h2>JACKETS BUSINESS</h2>
-					<h4>Lorem ipsum dolor sit amet.</h4>
-					<a href="" class="btn button-default">SHOP NOW</a>
+					<h2>商业套装</h2>
+					<h4>现在有服装有优惠.</h4>
+					<a href="" class="btn button-default">现在去购物</a>
 				</div>
 			</li>
 			<li>
 				<img src="img/slide3.jpg" alt="">
 				<div class="caption slider-content center-align">
-					<h2>FASHION SHOP</h2>
-					<h4>Lorem ipsum dolor sit amet.</h4>
-					<a href="" class="btn button-default">SHOP NOW</a>
+					<h2>时装店</h2>
+					<h4>赶上潮流才是应有的选择.</h4>
+					<a href="" class="btn button-default">现在去购物</a>
 				</div>
 			</li>
 		</ul>
@@ -404,8 +404,8 @@
 						<div class="icon">
 							<i class="fa fa-car"></i>
 						</div>
-						<h6>Free Shipping</h6>
-						<p>Lorem ipsum dolor sit amet consectetur</p>
+						<h6>免费送货</h6>
+						<p>服务上门 轻松到家</p>
 					</div>
 				</div>
 				<div class="col s6">
@@ -413,8 +413,8 @@
 						<div class="icon">
 							<i class="fa fa-dollar"></i>
 						</div>
-						<h6>Money Back</h6>
-						<p>Lorem ipsum dolor sit amet consectetur</p>
+						<h6>退款</h6>
+						<p>你的不满意是我们最大的伤心</p>
 					</div>
 				</div>
 			</div>
@@ -424,8 +424,8 @@
 						<div class="icon">
 							<i class="fa fa-lock"></i>
 						</div>
-						<h6>Secure Payment</h6>
-						<p>Lorem ipsum dolor sit amet consectetur</p>
+						<h6>安全支付</h6>
+						<p>管理好你的财产 花的放心 花的安心</p>
 					</div>
 				</div>
 				<div class="col s6">
@@ -433,8 +433,8 @@
 						<div class="icon">
 							<i class="fa fa-support"></i>
 						</div>
-						<h6>24/7 Support</h6>
-						<p>Lorem ipsum dolor sit amet consectetur</p>
+						<h6>客服</h6>
+						<p>只要你需要我们随时在</p>
 					</div>
 				</div>
 			</div>
@@ -445,8 +445,8 @@
 	<!-- quote -->
 	<div class="section quote">
 		<div class="container">
-			<h4>FASHION UP TO 50% OFF</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus illo hic iure eveniet</p>
+			<h4>时尚高达50％的折扣</h4>
+			<p>事情会通过正确的是耻辱发生在这里</p>
 		</div>
 	</div>
 	<!-- end quote -->
@@ -455,20 +455,20 @@
 	<div class="section product">
 		<div class="container">
 			<div class="section-head">
-				<h4>NEW PRODUCT</h4>
+				<h4>新产品</h4>
 				<div class="divider-top"></div>
 				<div class="divider-bottom"></div>
 			</div>
-			<div class="row">
+			<div class="">
 				<div class="col s6">
 					<div class="content">
 						@foreach($data as $k=>$v)
 						<img src="img/product-new4.png" alt="">
-						<h6><a href="/detail">{{$v->g_name}}</a></h6>
+						<h6><a href='/detail/{{$v->g_id}}'>{{$v->g_name}}</a></h6>
 						<div class="price">
 							 ${{$v->g_price0}}<span>${{$v->price}}</span>
 						</div>
-						<button class="btn button-default">添加到购物车</button>
+						<button class="btn button-default" g_id="{{$v->g_id}}">添加到购物车</button>
 						@endforeach
 					</div>
 				</div>
@@ -481,77 +481,15 @@
 	<div class="promo section">
 		<div class="container">
 			<div class="content">
-				<h4>PRODUCT BUNDLE</h4>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-				<button class="btn button-default">SHOP NOW</button>
+				<h4>产品套装</h4>
+				<p>存有商品增强回扣</p>
+				<button class="btn button-default">现在去购物</button>
 			</div>
 		</div>
 	</div>
 	<!-- end promo -->
 
 	<!-- product -->
-	<div class="section product">
-		<div class="container">
-			<div class="section-head">
-				<h4>TOP PRODUCT</h4>
-				<div class="divider-top"></div>
-				<div class="divider-bottom"></div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new1.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new2.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new3.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="img/product-new4.png" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
-			<div class="pagination-product">
-				<ul>
-					<li class="active">1</li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
-					<li><a href="">5</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<!-- end product -->
 	
 	<!-- loader -->
@@ -562,8 +500,8 @@
 	<div class="footer">
 		<div class="container">
 			<div class="about-us-foot">
-				<h6>Mstore</h6>
-				<p>is a lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p>
+				<h6>手机用户</h6>
+				<p>lorem ipsum dolor sit amet的酒，是一种圣洁的酒.</p>
 			</div>
 			<div class="social-media">
 				<a href=""><i class="fa fa-facebook"></i></a>
@@ -573,7 +511,7 @@
 				<a href=""><i class="fa fa-instagram"></i></a>
 			</div>
 			<div class="copyright">
-				<span>© 2017 All Right Reserved</span>
+				<span>©2019.9.23</span>
 			</div>
 		</div>
 	</div>
@@ -589,3 +527,22 @@
 
 </body>
 </html>
+<script>
+	$(document).on('click','.btn',function() {
+		var _this = $(this);
+		var g_id = _this.attr('g_id');
+		$.ajax({
+			url: '/cart/cartadd',
+			type: 'post',
+			data: {g_id: g_id},
+			dataType: 'json',
+			success: function (res) {
+				if (res.code == 1) {
+					location.href = '/cart';
+				} else {
+					alert('加入购物车失败');
+				}
+			}
+		})
+	})
+</script>
