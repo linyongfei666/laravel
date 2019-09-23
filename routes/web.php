@@ -26,4 +26,5 @@ Route::post('/cart/gettotal','CartController@gettotal');//计算小计
 
 Route::get('/detail','DetailController@detail');//商品详情
 
-Route::get('/order','OrderController@order');//商品详情
+Route::get('/order','OrderController@order');//订单详情
+Route::get('/orderConfirm','OrderController@orderConfirm');//确认订单
