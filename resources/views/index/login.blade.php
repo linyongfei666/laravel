@@ -380,6 +380,7 @@
 						</div>
 						{{--<a href=""><h6>Forgot Password ?</h6></a>--}}
 						<a class="btn button-default" id="btn">登录</a>
+						<a class="btn button-default" id="btn" href="/register">注册</a>
 					</form>
 				</div>
 			</div>

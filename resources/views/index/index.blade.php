@@ -87,12 +87,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col s4">
-						<a href="index.html" class="button-link">
+						<a href="/" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-home"></i>
 								</div>
-								Home
+								首页
 							</div>
 						</a>
 					</div>
@@ -371,7 +371,7 @@
 				<div class="caption slider-content  center-align">
 					<h2>欢迎来到MSTORE</h2>
 					<h4>现有商品优惠.</h4>
-					<a href="" class="btn button-default">现在去购物</a>
+					<a href="/product" class="btn button-default">现在去购物</a>
 				</div>
 			</li>
 			<li>
@@ -379,7 +379,7 @@
 				<div class="caption slider-content center-align">
 					<h2>商业套装</h2>
 					<h4>现在有服装有优惠.</h4>
-					<a href="" class="btn button-default">现在去购物</a>
+					<a href="/product" class="btn button-default">现在去购物</a>
 				</div>
 			</li>
 			<li>
@@ -387,7 +387,7 @@
 				<div class="caption slider-content center-align">
 					<h2>时装店</h2>
 					<h4>赶上潮流才是应有的选择.</h4>
-					<a href="" class="btn button-default">现在去购物</a>
+					<a href="/product" class="btn button-default">现在去购物</a>
 				</div>
 			</li>
 		</ul>

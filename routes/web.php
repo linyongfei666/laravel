@@ -21,6 +21,8 @@ Route::post('/regdo','LoginController@regdo');#注册执行
 Route::get('/login','LoginController@login');//登录页面
 Route::post('/logindo','LoginController@logindo');#注册登录
 
+Route::get('/product','ProductController@product');#商品列表排序
+
 Route::post('/cart/cartadd','CartController@cartadd');
 Route::get('/cart','CartController@cart');//购物车
 Route::post('/cart/cartbuynum','CartController@cartbuynum');//更改商品数量
