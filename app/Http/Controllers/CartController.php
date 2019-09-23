@@ -5,18 +5,26 @@ use App\Model\GoodsModel;
 use DB;
 use App\Model\CartModel;
 use Illuminate\Http\Request;
+use Session;
 
 class CartController extends Controller
 {
+	//加入购物车
 	public function cartadd(){
 		$g_id = request()->g_id;
 		$goodsWhere = [
 				'g_id' => $g_id,
 		];
+<<<<<<< HEAD
 		$goodsInfo = DB::table('goods')->where($goodsWhere)->first();
 		$user = request()->session()->get('user');
 		dd($user);
 		$goodsInfo = DB::table('user')->where('u_id',$user['u_id'])->first();
+=======
+		// $goodsInfo = DB::table('goods')->where($goodsWhere)->first();
+		$u_id=Session::get('u_id');
+		$goodsInfo = DB::table('user')->where('u_id',$u_id)->first();
+>>>>>>> ggg
 		$user_id = $goodsInfo->u_id;
 		$info = [
 				'goods_id' => $g_id,
@@ -34,6 +42,7 @@ class CartController extends Controller
 	//购物车首页
 	public function cart()
 	{
+<<<<<<< HEAD
 		$user = request()->session()->get('user');
 		dd($user);
 		$goodsInfo = DB::table('user')->where('u_id',$user['u_id'])->first();
@@ -42,6 +51,13 @@ class CartController extends Controller
             return redirect('/login');
         }
         $u_id = $goodsInfo->u_id;
+=======
+		$u_id=Session::get('u_id');
+		$goodsInfo = DB::table('user')->where('u_id',$u_id)->first();
+       if($goodsInfo==''){
+            return redirect('/login');
+        }
+>>>>>>> ggg
 		$cartinfo = DB::table('cart')
 				->join('goods','cart.goods_id','=','goods.g_id')
 				->where('u_id',$u_id)
@@ -82,7 +98,8 @@ class CartController extends Controller
 		}
 	}
 	/** 检测库存*/
-	public function checkgoodsnumber($g_id,$buy_num,$number=0){
+	public function checkgoodsnumber($g_id,$buy_num,$number=0)
+	{
 		//根据商品id 查询商品库存
 		$g_number=DB::table('goods')->where("g_id",$g_id)->value("g_number");
 		if($buy_num+$number>$g_number){

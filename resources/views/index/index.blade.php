@@ -455,23 +455,25 @@
 	<div class="section product">
 		<div class="container">
 			<div class="section-head">
-				<h4>新产品</h4>
+				<h4>商品大全</h4>
 				<div class="divider-top"></div>
 				<div class="divider-bottom"></div>
 			</div>
-			<div class="">
+			<div class="row">
+			@foreach($data as $k=>$v)
 				<div class="col s6">
 					<div class="content">
-						@foreach($data as $k=>$v)
-						<img src="img/product-new4.png" alt="">
+						
+					<a href='/detail/{{$v->g_id}}'><img src="img/product-new4.png" alt=""></a>
 						<h6><a href='/detail/{{$v->g_id}}'>{{$v->g_name}}</a></h6>
 						<div class="price">
 							 ${{$v->g_price0}}<span>${{$v->price}}</span>
 						</div>
 						<button class="btn button-default" g_id="{{$v->g_id}}">添加到购物车</button>
-						@endforeach
+						
 					</div>
 				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>
