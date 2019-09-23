@@ -552,16 +552,13 @@
 			$.ajax({
 				url:'/cart/del',
 				type:'POST',
+				data:{g_id:g_id},
 				success:function(res){
-					console.log(res);
-					// if(res.code == 200){
-					// var aa=res.data.goods_id
-					// var bb="g"+aa+"g"
-					
-					// $("."+bb+"").remove()
-					// $(".divider").remove()
-					// history.go(0)
-					// }
+					if(res.code == 00){
+						location.href="/cart";
+					}else{
+						alert(res.msg);
+					}
 				} 
 			})
 		}

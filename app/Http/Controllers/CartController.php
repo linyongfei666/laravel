@@ -130,8 +130,18 @@ class CartController extends Controller
 	public function del()
 	{
 		$g_id=request()->g_id;
-		$cartInfo=CartModel::where('goods_id',$g_id)->get();
-		dd($cartInfo);
+		$u_id=Session::get('u_id');
+		$where=[
+			'goods_id'=>$g_id,
+			'u_id'=>$u_id
+		];
+		$res=CartModel::where($where)->delete();
+		if($res){
+			return response(['code'=>00,'msg'=>"删除成功","data"=>[]]);
+		}else{
+			return response(['code'=>11,'msg'=>"删除失败","data"=>[]]);
+		}
+		
 	}
 
 }
