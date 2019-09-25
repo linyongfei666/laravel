@@ -385,7 +385,7 @@
 					</div>
 					<div class="col s7">
 						<img src="/storage/{{$v->img}}" alt="">
-						<img src="{{$v->img}}" alt="">
+						<img src="http://img1.imgtn.bdimg.com/it/u=3668630392,904992709&fm=26&gp=0.jpg" alt="">
 					</div>
 				</div>
 				<div class="row">
@@ -440,7 +440,7 @@
 					<h6>总价</h6>
 				</div>
 				<div class="col s5 stotal">
-					<h6>$0.00</h6>
+					<h6 class="qqq">$0.00</h6>
 				</div>
 			</div>
 		</div>
@@ -530,7 +530,7 @@
 				'/cart/total',
 				{g_id:g_id},
 				function(res){
-					$(".stotal").html('<h6>$'+res+'</h6>')
+					$(".stotal").html('<h6>$'+res+'</h6>');
 				}
 		)
 	}
@@ -562,5 +562,14 @@
 				} 
 			})
 		}
+	})
+	$(document).on('click','.btn',function(){
+		$.ajax({
+			url:'/aliPayScan',
+			type:'POST',
+			success:function(res){
+				console.log(res);
+			} 
+		})
 	})
 </script>

@@ -382,7 +382,7 @@
             <div class="col s6">
                 <div class="content">
                     <img src="/storage/{{$v->img}}" alt="">
-                    <img src="img/product-new1.png" alt="">
+                    <img src="http://img1.imgtn.bdimg.com/it/u=3668630392,904992709&fm=26&gp=0.jpg" alt="">
                     <h6><a href="">{{$v->g_name}}</a></h6>
                     <div class="price">
                         {{$v->g_price0}} <span>{{$v->price}}</span>

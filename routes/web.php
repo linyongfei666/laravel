@@ -34,3 +34,6 @@ Route::get('/detail/{id}','DetailController@detail');//商品详情
 Route::post('/detail/detailadd','DetailController@detailadd');//商品详情
 
 Route::get('/order','OrderController@order');//订单
+
+
+Route::post('/aliPayScan','AlipayController@aliPayScan');//订单

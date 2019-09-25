@@ -465,7 +465,7 @@
 				<div class="col s6">
 					<div class="content">
 						
-					<a href='/detail/{{$v->g_id}}'><img src="img/product-new4.png" alt=""></a>
+					<a href='/detail/{{$v->g_id}}'><img src="http://img1.imgtn.bdimg.com/it/u=3668630392,904992709&fm=26&gp=0.jpg" alt=""></a>
 
 						<h6><a href='/detail/{{$v->g_id}}'>{{$v->g_name}}</a></h6>
 						<div class="price">
