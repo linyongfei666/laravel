@@ -385,7 +385,7 @@
 					</div>
 					<div class="col s7">
 						<img src="/storage/{{$v->img}}" alt="">
-						<img src="http://img1.imgtn.bdimg.com/it/u=3668630392,904992709&fm=26&gp=0.jpg" alt="">
+						<img src="https://img13.360buyimg.com/n1/s450x450_jfs/t1/79993/29/9874/153231/5d7809f4E8f387bff/1dc9e1b6b262f0fb.jpg" alt="">
 					</div>
 				</div>
 				<div class="row">
