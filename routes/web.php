@@ -37,3 +37,8 @@ Route::get('/order','OrderController@order');//订单
 
 
 Route::post('/aliPayScan','AlipayController@aliPayScan');//订单
+
+
+
+
+Route::get('/add','TestController@addrecord');//订单
