@@ -41,4 +41,6 @@ Route::post('/aliPayScan','AlipayController@aliPayScan');//订单
 
 
 
-Route::get('/add','TestController@addrecord');//订单
+Route::get('/add','TestController@addrecord');//分区测试
+Route::get('/reg','TestController@reg');//分表测试
+
